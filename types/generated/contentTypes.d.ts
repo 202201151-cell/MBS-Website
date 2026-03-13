@@ -654,6 +654,15 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       'title-subtile-button-image.title-subtitle-button-image',
       true
     >;
+    co_person: Schema.Attribute.Component<'title-subtile.title-subtitle', true>;
+    Core_Offerings_components: Schema.Attribute.Component<
+      'title-subtile-button-image.title-subtitle-button-image',
+      true
+    >;
+    core_value_component: Schema.Attribute.Component<
+      'core-value-component.core-value-component',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -663,6 +672,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Technical_Competencies_component: Schema.Attribute.Component<
+      'technical-competencies.technical-competencies',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -889,7 +902,7 @@ export interface ApiWorkspaceSolutionWorkspaceSolution
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    hero_section: Schema.Attribute.Component<'section.hero', true>;
+    hero_section: Schema.Attribute.Component<'section.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -899,14 +912,14 @@ export interface ApiWorkspaceSolutionWorkspaceSolution
     publishedAt: Schema.Attribute.DateTime;
     title_subtile: Schema.Attribute.Component<
       'title-subtile.title-subtitle',
-      true
+      false
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Workspaces_info: Schema.Attribute.Component<
       'title-subtile-button-image.title-subtitle-button-image',
-      true
+      false
     >;
     Workspaces_pillar: Schema.Attribute.Component<'pillar.pillar', false>;
   };

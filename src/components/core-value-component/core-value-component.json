@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_core_value_component_core_value_components",
+  "info": {
+    "displayName": "core_value_component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icons": {
+      "type": "component",
+      "component": "icons.icon",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

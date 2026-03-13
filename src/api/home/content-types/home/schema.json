@@ -21,10 +21,30 @@
       "component": "impact-count.impact-no",
       "repeatable": false
     },
+    "co_person": {
+      "type": "component",
+      "component": "title-subtile.title-subtitle",
+      "repeatable": true
+    },
+    "Core_Offerings_components": {
+      "type": "component",
+      "component": "title-subtile-button-image.title-subtitle-button-image",
+      "repeatable": true
+    },
+    "core_value_component": {
+      "type": "component",
+      "component": "core-value-component.core-value-component",
+      "repeatable": false
+    },
     "banner": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
       "repeatable": true
+    },
+    "Technical_Competencies_component": {
+      "type": "component",
+      "component": "technical-competencies.technical-competencies",
+      "repeatable": false
     }
   }
 }

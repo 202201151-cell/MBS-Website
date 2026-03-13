@@ -15,15 +15,54 @@ export interface ALegacyOfTransformationALegacyOfTransformation
   };
 }
 
+export interface CoreValueComponentCoreValueComponent
+  extends Struct.ComponentSchema {
+  collectionName: 'components_core_value_component_core_value_components';
+  info: {
+    displayName: 'core_value_component';
+  };
+  attributes: {
+    icons: Schema.Attribute.Component<'icons.icon', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CtaButtonButton extends Struct.ComponentSchema {
   collectionName: 'components_cta_button_button_s';
   info: {
     displayName: 'button ';
   };
   attributes: {
-    contact_us: Schema.Attribute.Relation<'oneToOne', 'api::blog.blog'>;
+    redirect_link: Schema.Attribute.String;
     text: Schema.Attribute.String;
     visible: Schema.Attribute.Boolean;
+  };
+}
+
+export interface FooterFooter extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footers';
+  info: {
+    displayName: 'footer';
+  };
+  attributes: {
+    quick_links: Schema.Attribute.Component<'title.title', true>;
+    services: Schema.Attribute.Component<'title.title', true>;
+    social_links: Schema.Attribute.Component<'social-links.social-links', true>;
+    Solutions: Schema.Attribute.Component<'title.title', true>;
+  };
+}
+
+export interface IconsIcon extends Struct.ComponentSchema {
+  collectionName: 'components_icons_icons';
+  info: {
+    displayName: 'icon';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -97,9 +136,47 @@ export interface SectionHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
+    background_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     button: Schema.Attribute.Component<'cta-button.button', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SocialLinksSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_social_links_social_links';
+  info: {
+    displayName: 'social links';
+  };
+  attributes: {
+    social_icons: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    social_links: Schema.Attribute.String;
+  };
+}
+
+export interface TechnicalCompetenciesTechnicalCompetencies
+  extends Struct.ComponentSchema {
+  collectionName: 'components_technical_competencies_technical_competencies';
+  info: {
+    displayName: 'Technical_Competencies';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'cta-button.button', true>;
+    side_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.String;
+    title_subtile: Schema.Attribute.Component<
+      'title-subtile.title-subtitle',
+      true
+    >;
   };
 }
 
@@ -126,7 +203,17 @@ export interface TitleSubtileTitleSubtitle extends Struct.ComponentSchema {
     displayName: 'title_subtitle';
   };
   attributes: {
-    subtitle: Schema.Attribute.String;
+    sub_title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface TitleTitle extends Struct.ComponentSchema {
+  collectionName: 'components_title_titles';
+  info: {
+    displayName: 'title';
+  };
+  attributes: {
     title: Schema.Attribute.String;
   };
 }
@@ -135,15 +222,21 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'a-legacy-of-transformation.a-legacy-of-transformation': ALegacyOfTransformationALegacyOfTransformation;
+      'core-value-component.core-value-component': CoreValueComponentCoreValueComponent;
       'cta-button.button': CtaButtonButton;
+      'footer.footer': FooterFooter;
+      'icons.icon': IconsIcon;
       'impact-count.impact-no': ImpactCountImpactNo;
       'number.number': NumberNumber;
       'pillar.pillar': PillarPillar;
       'pillar.pillar-elemetn': PillarPillarElemetn;
       'progress-section.progress-section': ProgressSectionProgressSection;
       'section.hero': SectionHero;
+      'social-links.social-links': SocialLinksSocialLinks;
+      'technical-competencies.technical-competencies': TechnicalCompetenciesTechnicalCompetencies;
       'title-subtile-button-image.title-subtitle-button-image': TitleSubtileButtonImageTitleSubtitleButtonImage;
       'title-subtile.title-subtitle': TitleSubtileTitleSubtitle;
+      'title.title': TitleTitle;
     }
   }
 }

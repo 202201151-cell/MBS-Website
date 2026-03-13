@@ -8,13 +8,11 @@
     "text": {
       "type": "string"
     },
-    "contact_us": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::blog.blog"
-    },
     "visible": {
       "type": "boolean"
+    },
+    "redirect_link": {
+      "type": "string"
     }
   },
   "config": {}

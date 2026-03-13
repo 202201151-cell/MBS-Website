@@ -1,22 +1,19 @@
 {
-  "collectionName": "components_section_heroes",
+  "collectionName": "components_technical_competencies_technical_competencies",
   "info": {
-    "displayName": "hero"
+    "displayName": "Technical_Competencies"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "subtitle": {
-      "type": "string"
-    },
-    "button": {
+    "title_subtile": {
       "type": "component",
-      "component": "cta-button.button",
+      "component": "title-subtile.title-subtitle",
       "repeatable": true
     },
-    "background_image": {
+    "side_image": {
       "type": "media",
       "multiple": true,
       "allowedTypes": [
@@ -25,6 +22,11 @@
         "videos",
         "audios"
       ]
+    },
+    "button": {
+      "type": "component",
+      "component": "cta-button.button",
+      "repeatable": true
     }
   },
   "config": {}

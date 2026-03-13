@@ -8,7 +8,7 @@
     "title": {
       "type": "string"
     },
-    "subtitle": {
+    "sub_title": {
       "type": "string"
     }
   },
