@@ -76,6 +76,18 @@ export interface ImpactCountImpactNo extends Struct.ComponentSchema {
   };
 }
 
+export interface NumberGrowthNumberGrowth extends Struct.ComponentSchema {
+  collectionName: 'components_number_growth_number_growth_s';
+  info: {
+    displayName: 'number_growth ';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    number: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface NumberNumber extends Struct.ComponentSchema {
   collectionName: 'components_number_number_s';
   info: {
@@ -160,6 +172,21 @@ export interface SocialLinksSocialLinks extends Struct.ComponentSchema {
   };
 }
 
+export interface StrategicBusinessOutcomesStrategicBusinessOutcomes
+  extends Struct.ComponentSchema {
+  collectionName: 'components_strategic_business_outcomes_strategic_business_outcomes';
+  info: {
+    displayName: 'Strategic Business Outcomes';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<
+      'title-subtile-button-image.title-subtitle-button-image',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface TechnicalCompetenciesTechnicalCompetencies
   extends Struct.ComponentSchema {
   collectionName: 'components_technical_competencies_technical_competencies';
@@ -227,12 +254,14 @@ declare module '@strapi/strapi' {
       'footer.footer': FooterFooter;
       'icons.icon': IconsIcon;
       'impact-count.impact-no': ImpactCountImpactNo;
+      'number-growth.number-growth': NumberGrowthNumberGrowth;
       'number.number': NumberNumber;
       'pillar.pillar': PillarPillar;
       'pillar.pillar-elemetn': PillarPillarElemetn;
       'progress-section.progress-section': ProgressSectionProgressSection;
       'section.hero': SectionHero;
       'social-links.social-links': SocialLinksSocialLinks;
+      'strategic-business-outcomes.strategic-business-outcomes': StrategicBusinessOutcomesStrategicBusinessOutcomes;
       'technical-competencies.technical-competencies': TechnicalCompetenciesTechnicalCompetencies;
       'title-subtile-button-image.title-subtitle-button-image': TitleSubtileButtonImageTitleSubtitleButtonImage;
       'title-subtile.title-subtitle': TitleSubtileTitleSubtitle;

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_strategic_business_outcomes_strategic_business_outcomes",
+  "info": {
+    "displayName": "Strategic Business Outcomes"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "component": "title-subtile-button-image.title-subtitle-button-image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

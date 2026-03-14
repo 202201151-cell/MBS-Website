@@ -14,17 +14,27 @@
     "hero_section": {
       "type": "component",
       "component": "section.hero",
-      "repeatable": true
-    },
-    "Strategic_Excellence": {
-      "type": "component",
-      "component": "pillar.pillar",
-      "repeatable": true
+      "repeatable": false
     },
     "banner": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
+      "repeatable": false
+    },
+    "Result_section": {
+      "type": "component",
+      "component": "title-subtile.title-subtitle",
+      "repeatable": false
+    },
+    "number_growth": {
+      "type": "component",
+      "component": "number-growth.number-growth",
       "repeatable": true
+    },
+    "Strategic_Excellences": {
+      "type": "component",
+      "component": "progress-section.progress-section",
+      "repeatable": false
     }
   }
 }

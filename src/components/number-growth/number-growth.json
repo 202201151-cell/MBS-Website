@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_number_growth_number_growth_s",
+  "info": {
+    "displayName": "number_growth "
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -14,7 +14,7 @@
     "hero_section": {
       "type": "component",
       "component": "section.hero",
-      "repeatable": true
+      "repeatable": false
     },
     "Core_Transformation_Pillars": {
       "type": "component",
@@ -24,6 +24,11 @@
     "banner": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
+      "repeatable": false
+    },
+    "Guides": {
+      "type": "component",
+      "component": "title-subtile.title-subtitle",
       "repeatable": true
     }
   }

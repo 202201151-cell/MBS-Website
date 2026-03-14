@@ -515,7 +515,7 @@ export interface ApiBusinessInformationBusinessInformation
   attributes: {
     banner: Schema.Attribute.Component<
       'title-subtile-button-image.title-subtitle-button-image',
-      true
+      false
     >;
     Core_Transformation_Pillars: Schema.Attribute.Component<
       'pillar.pillar',
@@ -524,7 +524,8 @@ export interface ApiBusinessInformationBusinessInformation
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    hero_section: Schema.Attribute.Component<'section.hero', true>;
+    Guides: Schema.Attribute.Component<'title-subtile.title-subtitle', true>;
+    hero_section: Schema.Attribute.Component<'section.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -557,6 +558,10 @@ export interface ApiDataAnalyticsCloudAiDataAnalyticsCloudAi
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Engineering_the_Future: Schema.Attribute.Component<
+      'title-subtile.title-subtitle',
+      true
+    >;
     hero_section: Schema.Attribute.Component<'section.hero', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -565,6 +570,10 @@ export interface ApiDataAnalyticsCloudAiDataAnalyticsCloudAi
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Strategic_Business_Outcomes: Schema.Attribute.Component<
+      'strategic-business-outcomes.strategic-business-outcomes',
+      false
+    >;
     Technical_Pillars: Schema.Attribute.Component<
       'progress-section.progress-section',
       false
@@ -589,16 +598,16 @@ export interface ApiDigitalInfraOpDigitalInfraOp
   attributes: {
     banner: Schema.Attribute.Component<
       'title-subtile-button-image.title-subtitle-button-image',
-      true
+      false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Framework: Schema.Attribute.Component<
       'progress-section.progress-section',
-      true
+      false
     >;
-    hero_section: Schema.Attribute.Component<'section.hero', true>;
+    hero_section: Schema.Attribute.Component<'section.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -606,6 +615,14 @@ export interface ApiDigitalInfraOpDigitalInfraOp
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Strategic_Business_Outcomes: Schema.Attribute.Component<
+      'strategic-business-outcomes.strategic-business-outcomes',
+      false
+    >;
+    tech_manage: Schema.Attribute.Component<
+      'title-subtile.title-subtitle',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -783,20 +800,31 @@ export interface ApiPlatformProductEngineeringPlatformProductEngineering
   attributes: {
     banner: Schema.Attribute.Component<
       'title-subtile-button-image.title-subtitle-button-image',
-      true
+      false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    hero_section: Schema.Attribute.Component<'section.hero', true>;
+    hero_section: Schema.Attribute.Component<'section.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::platform-product-engineering.platform-product-engineering'
     > &
       Schema.Attribute.Private;
+    number_growth: Schema.Attribute.Component<
+      'number-growth.number-growth',
+      true
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    Strategic_Excellence: Schema.Attribute.Component<'pillar.pillar', true>;
+    Result_section: Schema.Attribute.Component<
+      'title-subtile.title-subtitle',
+      false
+    >;
+    Strategic_Excellences: Schema.Attribute.Component<
+      'progress-section.progress-section',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
