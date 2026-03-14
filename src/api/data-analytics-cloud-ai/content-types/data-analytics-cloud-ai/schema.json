@@ -16,7 +16,7 @@
       "component": "section.hero",
       "repeatable": false
     },
-    "Technical_Pillars": {
+    "Pillar": {
       "type": "component",
       "component": "progress-section.progress-section",
       "repeatable": false

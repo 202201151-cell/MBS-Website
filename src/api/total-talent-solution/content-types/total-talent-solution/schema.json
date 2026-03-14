@@ -16,22 +16,22 @@
       "component": "section.hero",
       "repeatable": false
     },
-    "MBS_Lifecycle": {
-      "type": "component",
-      "component": "pillar.pillar",
-      "repeatable": false
-    },
-    "talent_progess": {
+    "progress": {
       "type": "component",
       "component": "progress-section.progress-section",
       "repeatable": false
     },
-    "banner": {
+    "Pillar": {
+      "type": "component",
+      "component": "pillar.pillar",
+      "repeatable": false
+    },
+    "info": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
       "repeatable": false
     },
-    "total_talent_info": {
+    "banner": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
       "repeatable": false

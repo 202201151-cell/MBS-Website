@@ -26,12 +26,12 @@
       "component": "pillar.pillar",
       "repeatable": false
     },
-    "banner": {
+    "info": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
       "repeatable": false
     },
-    "Workspaces_info": {
+    "banner": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
       "repeatable": false

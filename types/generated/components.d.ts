@@ -187,6 +187,19 @@ export interface StrategicBusinessOutcomesStrategicBusinessOutcomes
   };
 }
 
+export interface SwipeSwipe extends Struct.ComponentSchema {
+  collectionName: 'components_swipe_swipes';
+  info: {
+    displayName: 'swipe';
+  };
+  attributes: {
+    title_subtile: Schema.Attribute.Component<
+      'title-subtile.title-subtitle',
+      false
+    >;
+  };
+}
+
 export interface TechnicalCompetenciesTechnicalCompetencies
   extends Struct.ComponentSchema {
   collectionName: 'components_technical_competencies_technical_competencies';
@@ -224,6 +237,17 @@ export interface TitleSubtileButtonImageTitleSubtitleButtonImage
   };
 }
 
+export interface TitleSubtileSwipeElement extends Struct.ComponentSchema {
+  collectionName: 'components_title_subtile_swipe_elements';
+  info: {
+    displayName: 'swipe_element';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface TitleSubtileTitleSubtitle extends Struct.ComponentSchema {
   collectionName: 'components_title_subtile_title_subtitles';
   info: {
@@ -231,6 +255,10 @@ export interface TitleSubtileTitleSubtitle extends Struct.ComponentSchema {
   };
   attributes: {
     sub_title: Schema.Attribute.String;
+    swipe_element: Schema.Attribute.Component<
+      'title-subtile.swipe-element',
+      true
+    >;
     title: Schema.Attribute.String;
   };
 }
@@ -262,8 +290,10 @@ declare module '@strapi/strapi' {
       'section.hero': SectionHero;
       'social-links.social-links': SocialLinksSocialLinks;
       'strategic-business-outcomes.strategic-business-outcomes': StrategicBusinessOutcomesStrategicBusinessOutcomes;
+      'swipe.swipe': SwipeSwipe;
       'technical-competencies.technical-competencies': TechnicalCompetenciesTechnicalCompetencies;
       'title-subtile-button-image.title-subtitle-button-image': TitleSubtileButtonImageTitleSubtitleButtonImage;
+      'title-subtile.swipe-element': TitleSubtileSwipeElement;
       'title-subtile.title-subtitle': TitleSubtileTitleSubtitle;
       'title.title': TitleTitle;
     }

@@ -16,25 +16,30 @@
       "component": "section.hero",
       "repeatable": false
     },
-    "Toolkit": {
+    "title_subtile": {
+      "type": "component",
+      "component": "title-subtile.title-subtitle",
+      "repeatable": false
+    },
+    "progress": {
+      "type": "component",
+      "component": "progress-section.progress-section",
+      "repeatable": false
+    },
+    "Pillar": {
       "type": "component",
       "component": "pillar.pillar",
       "repeatable": false
     },
-    "Concept_to_Reality": {
+    "info": {
       "type": "component",
-      "component": "progress-section.progress-section",
-      "repeatable": true
+      "component": "title-subtile-button-image.title-subtitle-button-image",
+      "repeatable": false
     },
     "banner": {
       "type": "component",
       "component": "title-subtile-button-image.title-subtitle-button-image",
-      "repeatable": true
-    },
-    "innovation": {
-      "type": "component",
-      "component": "title-subtile-button-image.title-subtitle-button-image",
-      "repeatable": true
+      "repeatable": false
     }
   }
 }

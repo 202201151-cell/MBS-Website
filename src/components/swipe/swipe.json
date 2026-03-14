@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_swipe_swipes",
+  "info": {
+    "displayName": "swipe"
+  },
+  "options": {},
+  "attributes": {
+    "title_subtile": {
+      "type": "component",
+      "component": "title-subtile.title-subtitle",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -513,10 +513,6 @@ export interface ApiBusinessInformationBusinessInformation
       'title-subtile-button-image.title-subtitle-button-image',
       false
     >;
-    Core_Transformation_Pillars: Schema.Attribute.Component<
-      'pillar.pillar',
-      false
-    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -528,6 +524,7 @@ export interface ApiBusinessInformationBusinessInformation
       'api::business-information.business-information'
     > &
       Schema.Attribute.Private;
+    Pillar: Schema.Attribute.Component<'pillar.pillar', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -565,13 +562,13 @@ export interface ApiDataAnalyticsCloudAiDataAnalyticsCloudAi
       'api::data-analytics-cloud-ai.data-analytics-cloud-ai'
     > &
       Schema.Attribute.Private;
+    Pillar: Schema.Attribute.Component<
+      'progress-section.progress-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     Strategic_Business_Outcomes: Schema.Attribute.Component<
       'strategic-business-outcomes.strategic-business-outcomes',
-      false
-    >;
-    Technical_Pillars: Schema.Attribute.Component<
-      'progress-section.progress-section',
       false
     >;
     updatedAt: Schema.Attribute.DateTime;
@@ -708,19 +705,15 @@ export interface ApiInnovationInnovation extends Struct.SingleTypeSchema {
   attributes: {
     banner: Schema.Attribute.Component<
       'title-subtile-button-image.title-subtitle-button-image',
-      true
-    >;
-    Concept_to_Reality: Schema.Attribute.Component<
-      'progress-section.progress-section',
-      true
+      false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hero_section: Schema.Attribute.Component<'section.hero', false>;
-    innovation: Schema.Attribute.Component<
+    info: Schema.Attribute.Component<
       'title-subtile-button-image.title-subtitle-button-image',
-      true
+      false
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -728,8 +721,16 @@ export interface ApiInnovationInnovation extends Struct.SingleTypeSchema {
       'api::innovation.innovation'
     > &
       Schema.Attribute.Private;
+    Pillar: Schema.Attribute.Component<'pillar.pillar', false>;
+    progress: Schema.Attribute.Component<
+      'progress-section.progress-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    Toolkit: Schema.Attribute.Component<'pillar.pillar', false>;
+    title_subtile: Schema.Attribute.Component<
+      'title-subtile.title-subtitle',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -750,31 +751,31 @@ export interface ApiOperativeManagementOperativeManagement
   attributes: {
     banner: Schema.Attribute.Component<
       'title-subtile-button-image.title-subtitle-button-image',
-      true
+      false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Global_Efficiency: Schema.Attribute.Component<'pillar.pillar', true>;
     hero_section: Schema.Attribute.Component<'section.hero', false>;
+    info: Schema.Attribute.Component<
+      'title-subtile-button-image.title-subtitle-button-image',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::operative-management.operative-management'
     > &
       Schema.Attribute.Private;
-    Managed_Services: Schema.Attribute.Component<
+    Pillar: Schema.Attribute.Component<'pillar.pillar', true>;
+    progress: Schema.Attribute.Component<
       'progress-section.progress-section',
-      true
-    >;
-    operative_management_info: Schema.Attribute.Component<
-      'title-subtile-button-image.title-subtitle-button-image',
-      true
+      false
     >;
     publishedAt: Schema.Attribute.DateTime;
     title_subtile: Schema.Attribute.Component<
       'title-subtile.title-subtitle',
-      true
+      false
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -847,16 +848,21 @@ export interface ApiStrategicConsultingStrategicConsulting
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hero_section: Schema.Attribute.Component<'section.hero', false>;
+    info: Schema.Attribute.Component<
+      'title-subtile-button-image.title-subtitle-button-image',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::strategic-consulting.strategic-consulting'
     > &
       Schema.Attribute.Private;
+    Pillar: Schema.Attribute.Component<'pillar.pillar', false>;
     publishedAt: Schema.Attribute.DateTime;
-    Strategic_Excellence: Schema.Attribute.Component<'pillar.pillar', false>;
-    Strategic_info: Schema.Attribute.Component<
-      'title-subtile-button-image.title-subtitle-button-image',
+    swipe: Schema.Attribute.Component<'swipe.swipe', false>;
+    title_subtile: Schema.Attribute.Component<
+      'title-subtile.title-subtitle',
       false
     >;
     updatedAt: Schema.Attribute.DateTime;
@@ -885,22 +891,22 @@ export interface ApiTotalTalentSolutionTotalTalentSolution
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hero_section: Schema.Attribute.Component<'section.hero', false>;
+    info: Schema.Attribute.Component<
+      'title-subtile-button-image.title-subtitle-button-image',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::total-talent-solution.total-talent-solution'
     > &
       Schema.Attribute.Private;
-    MBS_Lifecycle: Schema.Attribute.Component<'pillar.pillar', false>;
-    publishedAt: Schema.Attribute.DateTime;
-    talent_progess: Schema.Attribute.Component<
+    Pillar: Schema.Attribute.Component<'pillar.pillar', false>;
+    progress: Schema.Attribute.Component<
       'progress-section.progress-section',
       false
     >;
-    total_talent_info: Schema.Attribute.Component<
-      'title-subtile-button-image.title-subtitle-button-image',
-      false
-    >;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -927,6 +933,10 @@ export interface ApiWorkspaceSolutionWorkspaceSolution
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hero_section: Schema.Attribute.Component<'section.hero', false>;
+    info: Schema.Attribute.Component<
+      'title-subtile-button-image.title-subtitle-button-image',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -942,10 +952,6 @@ export interface ApiWorkspaceSolutionWorkspaceSolution
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Workspaces_info: Schema.Attribute.Component<
-      'title-subtile-button-image.title-subtitle-button-image',
-      false
-    >;
   };
 }
 

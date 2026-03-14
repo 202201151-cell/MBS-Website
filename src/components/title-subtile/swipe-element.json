@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_title_subtile_swipe_elements",
+  "info": {
+    "displayName": "swipe_element"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

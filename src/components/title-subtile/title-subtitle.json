@@ -10,6 +10,11 @@
     },
     "sub_title": {
       "type": "string"
+    },
+    "swipe_element": {
+      "type": "component",
+      "component": "title-subtile.swipe-element",
+      "repeatable": true
     }
   },
   "config": {}
