@@ -933,6 +933,7 @@ export interface ApiWorkspaceSolutionWorkspaceSolution
       'api::workspace-solution.workspace-solution'
     > &
       Schema.Attribute.Private;
+    Pillar: Schema.Attribute.Component<'pillar.pillar', false>;
     publishedAt: Schema.Attribute.DateTime;
     title_subtile: Schema.Attribute.Component<
       'title-subtile.title-subtitle',
@@ -945,7 +946,6 @@ export interface ApiWorkspaceSolutionWorkspaceSolution
       'title-subtile-button-image.title-subtitle-button-image',
       false
     >;
-    Workspaces_pillar: Schema.Attribute.Component<'pillar.pillar', false>;
   };
 }
 

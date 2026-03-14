@@ -21,7 +21,7 @@
       "component": "title-subtile.title-subtitle",
       "repeatable": false
     },
-    "Workspaces_pillar": {
+    "Pillar": {
       "type": "component",
       "component": "pillar.pillar",
       "repeatable": false
