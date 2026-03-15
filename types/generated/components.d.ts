@@ -243,6 +243,10 @@ export interface TitleSubtileSwipeElement extends Struct.ComponentSchema {
     displayName: 'swipe_element';
   };
   attributes: {
+    icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
