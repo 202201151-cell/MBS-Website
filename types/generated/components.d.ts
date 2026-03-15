@@ -73,6 +73,7 @@ export interface ImpactCountImpactNo extends Struct.ComponentSchema {
   };
   attributes: {
     numbers: Schema.Attribute.Component<'number.number', true>;
+    title: Schema.Attribute.String;
   };
 }
 
