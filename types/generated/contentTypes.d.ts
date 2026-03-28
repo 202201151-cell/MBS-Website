@@ -459,11 +459,43 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
       'api::about-us.about-us'
     > &
       Schema.Attribute.Private;
+    progress: Schema.Attribute.Component<
+      'progress-section.progress-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     short_about: Schema.Attribute.Component<
       'title-subtile.title-subtitle',
       true
     >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAiCentricProductEngineeringAiCentricProductEngineering
+  extends Struct.SingleTypeSchema {
+  collectionName: 'ai_centric_product_engineerings';
+  info: {
+    displayName: 'AI-centric Product Engineering';
+    pluralName: 'ai-centric-product-engineerings';
+    singularName: 'ai-centric-product-engineering';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-centric-product-engineering.ai-centric-product-engineering'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -525,6 +557,34 @@ export interface ApiBusinessInformationBusinessInformation
     > &
       Schema.Attribute.Private;
     Pillar: Schema.Attribute.Component<'pillar.pillar', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
+  collectionName: 'contact_uses';
+  info: {
+    displayName: 'contact us';
+    pluralName: 'contact-uses';
+    singularName: 'contact-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-us.contact-us'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.Component<'location.location', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -681,6 +741,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
+    location: Schema.Attribute.Component<'location.location', false>;
     publishedAt: Schema.Attribute.DateTime;
     Technical_Competencies_component: Schema.Attribute.Component<
       'technical-competencies.technical-competencies',
@@ -787,7 +848,7 @@ export interface ApiPlatformProductEngineeringPlatformProductEngineering
   extends Struct.SingleTypeSchema {
   collectionName: 'platform_product_engineerings';
   info: {
-    displayName: 'platform-product-engineering';
+    displayName: 'Next-Gen AI Platform Engineering';
     pluralName: 'platform-product-engineerings';
     singularName: 'platform-product-engineering';
   };
@@ -917,7 +978,7 @@ export interface ApiWorkspaceSolutionWorkspaceSolution
   extends Struct.SingleTypeSchema {
   collectionName: 'workspace_solutions';
   info: {
-    displayName: 'Workspace_solution';
+    displayName: 'GCC Strategy & Enablement';
     pluralName: 'workspace-solutions';
     singularName: 'workspace-solution';
   };
@@ -1467,8 +1528,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::ai-centric-product-engineering.ai-centric-product-engineering': ApiAiCentricProductEngineeringAiCentricProductEngineering;
       'api::blog.blog': ApiBlogBlog;
       'api::business-information.business-information': ApiBusinessInformationBusinessInformation;
+      'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::data-analytics-cloud-ai.data-analytics-cloud-ai': ApiDataAnalyticsCloudAiDataAnalyticsCloudAi;
       'api::digital-infra-op.digital-infra-op': ApiDigitalInfraOpDigitalInfraOp;
       'api::home-page.home-page': ApiHomePageHomePage;
