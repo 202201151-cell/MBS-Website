@@ -45,6 +45,11 @@
       "type": "component",
       "component": "technical-competencies.technical-competencies",
       "repeatable": false
+    },
+    "location": {
+      "type": "component",
+      "component": "location.location",
+      "repeatable": false
     }
   }
 }

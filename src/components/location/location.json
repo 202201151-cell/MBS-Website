@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_location_locations",
+  "info": {
+    "displayName": "location"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "location_element": {
+      "type": "component",
+      "component": "title-subtile-button-image.title-subtitle-button-image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

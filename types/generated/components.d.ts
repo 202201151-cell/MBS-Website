@@ -77,6 +77,20 @@ export interface ImpactCountImpactNo extends Struct.ComponentSchema {
   };
 }
 
+export interface LocationLocation extends Struct.ComponentSchema {
+  collectionName: 'components_location_locations';
+  info: {
+    displayName: 'location';
+  };
+  attributes: {
+    location_element: Schema.Attribute.Component<
+      'title-subtile-button-image.title-subtitle-button-image',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface NumberGrowthNumberGrowth extends Struct.ComponentSchema {
   collectionName: 'components_number_growth_number_growth_s';
   info: {
@@ -291,6 +305,7 @@ declare module '@strapi/strapi' {
       'footer.footer': FooterFooter;
       'icons.icon': IconsIcon;
       'impact-count.impact-no': ImpactCountImpactNo;
+      'location.location': LocationLocation;
       'number-growth.number-growth': NumberGrowthNumberGrowth;
       'number.number': NumberNumber;
       'pillar.pillar': PillarPillar;

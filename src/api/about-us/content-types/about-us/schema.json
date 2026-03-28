@@ -16,20 +16,25 @@
       "component": "section.hero",
       "repeatable": false
     },
-    "A_Legacy_of_Transformation": {
-      "type": "component",
-      "component": "a-legacy-of-transformation.a-legacy-of-transformation",
-      "repeatable": false
-    },
     "short_about": {
       "type": "component",
       "component": "title-subtile.title-subtitle",
       "repeatable": true
     },
+    "A_Legacy_of_Transformation": {
+      "type": "component",
+      "component": "a-legacy-of-transformation.a-legacy-of-transformation",
+      "repeatable": false
+    },
     "empowering_text": {
       "type": "component",
       "component": "title-subtile.title-subtitle",
       "repeatable": true
+    },
+    "progress": {
+      "type": "component",
+      "component": "progress-section.progress-section",
+      "repeatable": false
     }
   }
 }

@@ -1,0 +1,14 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_centric_product_engineerings",
+  "info": {
+    "singularName": "ai-centric-product-engineering",
+    "pluralName": "ai-centric-product-engineerings",
+    "displayName": "AI-centric Product Engineering"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
